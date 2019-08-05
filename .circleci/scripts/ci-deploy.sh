@@ -17,3 +17,5 @@ echo "$KUBERNETES_KUBECONFIG" | base64 --decode > kubeconfig.yml
 ./kubectl --kubeconfig=kubeconfig.yml get nodes
 
 ./kubectl --kubeconfig=kubeconfig.yml apply -f ./.circleci/kube
+
+./kubectl --kubeconfig=kubeconfig.yml apply -f ./.metrics
